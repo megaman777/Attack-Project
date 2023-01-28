@@ -45,8 +45,15 @@ def login():
 
         username = request.form['username']
         password = request.form['password']
+        
+        user = None
+        for x in users:
+            if x.username == username:
+                user = x
+                break
+        if user == None:
+            return redirect(url_for('login'))
 
-        user = [x for x in users if x.username == username][0]
         if user and user.password != password:
             return redirect(url_for('login'))
         if user and user.password == password:
