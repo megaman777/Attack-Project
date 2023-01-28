@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaSploit</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+    <div id="test"></div>
+    <script>
+        $('body').terminal({
+            hello: function(what) {
+                this.echo('Hello, ' + what +'. Wellcome to this terminal.');
+            }
+        }, {
+            greetings: 'My First Web Terminal'
+        });
+        </script>
+    <!-- <form action="/subdomain-enum.js">
+        <input type="url" value="Enter Your Target">
+        <input type="submit" value="Attack">
+    </form> -->
+</body>
+</html>

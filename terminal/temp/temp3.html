@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@1.19.0/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jquery.terminal@1.19.0/css/jquery.terminal.min.css" />
+  </head>
+  <body>
+    <div id="cmd"></div>
+    <script>
+      $('body').terminal(function(command) {
+        if (command == 'help') {
+          this.echo("Type the following.\n");
+          this.echo("help -> get a list of commands");
+          this.echo("exit -> exits the shell");
+        } else if (command == 'exit') {
+          this.echo("Bye!");
+        } else if (command == 'whoami') {
+            this.echo("mega7");
+        } else if (command == 'pwd') {
+            this.echo("/home/mega7");
+        } else {
+          this.error('Unknown command: ' + command);
+        }
+      }, {
+        greetings: '╔〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨〨╗\n|  __  __                   _____       _       _ _    |\n| |  \\/  |                 / ____|     | |     (_| |   |\n| | \\  / | ___  __ _  __ _| (___  _ __ | | ___  _| |_  |\n| | |\\/| |/ _ \\/ _\\`|/ _\\`|\\___ \\| _ \\ | |/ _ \\| | __| |\n| | |  | |  __| (_| | (_| |____) | |_) | | (_) | | |_  |\n| |_|  |_|\\___|\\__, |\\__,_|_____/| .__/|_|\\___/|_|\\__| |\n|               __/ |            | |                   |\n|              |___/             |_|                   |\n〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧〧\n|          Web Applications Security Scanner           |\n|               By Amgad Esam - @Mega7                 |\n╚______________________________________________________╝'
+        
+    });
+    </script>
+  </body>
+</html>
