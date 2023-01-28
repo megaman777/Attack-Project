@@ -1,0 +1,25 @@
+{% extends "header.html" %} {% block body %}
+
+<h2>Home Page</h2>
+<p>This is the home page!</p>
+
+<form action="login" method="POST">
+  <input
+    type="text"
+    name="username"
+    id="name"
+    placeholder="Username"
+    class="form-feild"
+  /><br />
+  <input
+    type="password"
+    name="password"
+    id="name"
+    placeholder="Password"
+    class="form-feild"
+  /><br />
+  <button type="submit" class="add-btn">Login</button>
+</form>
+<br />
+
+{% endblock %}
